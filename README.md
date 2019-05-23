@@ -12,53 +12,12 @@ ESLint ist ein Open-Source-Dienstprogramm zum 'flusen' von JavaScript, das urspr
 
 ## Was sind ESLint Styleguides?
 
-### 1.  jQuery nicht mehr standardmäßig
+### Eslint Styleguides sorgen dafür das dein Code gewisse Stilrichtlinien von einer zuvor gesetzen Konfiguration einhält. Es exestieren 2 bekannte Styleguides:
 
-![enter image description here](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/JQuery-Logo.svg/768px-JQuery-Logo.svg.png) ![enter image description here](https://media.giphy.com/media/1jkVi22T6iUrQJUNqk/giphy.gif)
+#### 1. AirBnb
+#### 2. Google
+![enter image description here](https://media.giphy.com/media/5OAC2cIC2XcWY/giphy.gif)
 
-### 2. Native JavaScript Classes
-
-  ####  Ember Standard
-
-```javascript
-export default Component.extend({
-  foo: service(),
-      
-  bar: computed('someWord', 'otherWord', function() {
-    let someWord = this.someWord;
-    let otherWord = this.otherWord;
-         
-    return `${someWord} - ${otherWord}`;
-  }),
-       
-  actions: {
-    trigger() {
-      //blabla
-    }
-  }
-}) 
-```
-
-####  Ember-Octane
-
-```javascript
-export default class ExampleComponent extends Component{
-  @service foo
-  
-  @computed('someWord', 'otherWord')
-  get bar() {
-    const someWord = this.get('someWord');
-    const otherWord = this.get('otherWord');
-    return `${someWord} - ${otherWord}`;
-  }
-  
-  @action
-  trigger() {
-    //blabla
-  }
-}
-```
-    
 ### 3. Glimmer Components
 
 #### Ember-Standard
