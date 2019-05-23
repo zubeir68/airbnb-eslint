@@ -18,118 +18,17 @@ ESLint ist ein Open-Source-Dienstprogramm zum 'flusen' von JavaScript, das urspr
 #### 2. Google
 ![enter image description here](https://media.giphy.com/media/5OAC2cIC2XcWY/giphy.gif)
 
-### 3. Glimmer Components
+### 3. ESLint in Ember-App einfügen
 
-#### Ember-Standard
+#### ESLint plugin import installieren
 
-```html
-{{!-- templates//components/post.hbs --}}
-
-{{#if (eq  type  'image')}}
-<img  src={{post.imageUrl}}  title={{post.imageTitle}}>
-{{/if}}
-
-{{post.text}}
-```
-```javascript
-// components/post.js
-export  default  Component.extend({
-
-  tagName: 'section',
-  classNames: ['post'],
-  classNameBindings: ['type'],
-  ariaRole: 'region',
-
-  post: null,
-  
-  type: readOnly('post.type'),
-  
-  didInsertElement() {
-    this._super(...arguments);
-    if (this.type  ===  'image') {
-      setupImageOverlay(this.element.querySelector('img'));
-    } 
-  }
-});
+```bash
+npm install eslint-plugin-import --save-dev
 ```
 
-#### Ember-Octane
-
-```html
-<section
-  ...attributes
-  role="region"
-  type={{@post.type}
-  class="post {{@post.type}}"
->
-  {{#if (eq @post.type  'image')}}
-    <img  {{did-insert  this.didInsertImage}}  src={{@post.imageUrl}}  title={{@post.imageTitle}}/>
-  {{/if}}
-  {{@post.text}}
-</section>
-```
-```javascript
-// components/post.js
-export default class PostComponent extends GlimmerComponent{
-  @action
-  didInsertImage(element) {
-    setupImageOverlay(element);
-  }
-}
+#### Dann ESLint styleguide installieren - hier AirBnB
+```bash
+npm install eslint-config-airbnb-base --save-dev
 ```
 
-### 4. Element Modifiers
-
-#### Ember-Standard
-```html
-{{#if this.isOpen}}
-  <div class="popover">
-    {{yield}}
-  </div>
-{{/if}}
-```
-```javascript
-export default Component.extend({
-  didRender() {
-    if (this.isOpen && !this._popper) {
-      let popoverElement = this.element.querySelector('.popover');
-       
-      this._popper = new Popper(documents, popoverElement);
-    } else if(this._popper) {
-      this._popper.destroy();
-    }
-  },
-   
-  willDestroyElement() {
-    if(this._popper) {
-      this._popper.destroy();
-    }
-  }
-})
-```
-#### Ember-Octane
-
-```html
-{{#if this.isOpen}}
-  <div 
-    {{did-insert (action this.setupPopper)}}
-    {{will-destroy (action this.teardownPopper)}}
-     
-    class="popover"
-  >
-    {{yield}}
-  </div>
-{{/if}}
-```
-
-```javascript
-export default Component.extend({
-  setupPopper(element) {
-    this._popper = new Popper(document, element);
-  },
-   
-  teardownPopper() {
-    this._popper.destroy();
-  }
-})
-```
+#### Man ist immernoch frei 'rules' aufzustellen um den styleguide nochmal deinen Wünschen anzupassen!
