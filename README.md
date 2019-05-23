@@ -1,8 +1,9 @@
-﻿# Ember-Octane
+﻿# ESLint-Styleguides
 
-![enter image description here](http://hangaroundtheweb.com/wp-content/uploads/2018/08/ember-octane.png)
+![enter image description here](https://res.cloudinary.com/practicaldev/image/fetch/s--AMz6SUme--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/jv8mmasb5mf0ilw5q1lz.png)
+![enter image description here](https://cdn-images-1.medium.com/max/1600/1*EJf1MIFRPIOUd_Rns8Yqiw.png)
 
-## Was ist Ember-Octane ?
+## Was sind ESLint-Styleguides ?
 
 ***"People often ask me: 'is Octane a version of Ember? Is Octane Ember 4.0?'  
 Neither.  
