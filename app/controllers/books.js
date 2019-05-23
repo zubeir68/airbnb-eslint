@@ -3,8 +3,6 @@ import { set } from '@ember/object';
 
 export default Controller.extend({
 
-    activate: false, 
-
     actions: {
         add(title) {
             let bookTitle = this.store.createRecord('book', {title});
@@ -17,17 +15,6 @@ export default Controller.extend({
                 book.deleteRecord();
                 book.save();
             });
-        },
-
-        activate() {
-            set(this, "activate", true);
-        },
-
-        edit(item, title) {
-            this.store.findRecord('book', item.id).then(book => {
-                book.set('title', title);
-                book.save();
-            })
         }
     }
 });
