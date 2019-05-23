@@ -1,0 +1,25 @@
+
+<br><div class="ui grid">
+  <div class="three wide column"></div>
+  <div class="ten wide column">
+    <div class="ui raised segment" >
+      <br>
+      <div class="ui large input">
+        {{input value=title placeholder="Add Book..." enter=(action "add" title)}}
+      </div>
+      <div class="ui hidden divider"></div>
+        {{#each model as |item|}}
+          {{#ui-accordion style="fluid"}}
+            <div class="visible">
+              
+            </div>
+            <div class="hidden">
+
+            </div>
+          {{/ui-accordion}}
+        {{/each}}
+      {{outlet}}
+    </div>
+  </div>
+  <div class="three wide column"></div>
+</div>
