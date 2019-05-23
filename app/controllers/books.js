@@ -1,20 +1,22 @@
-import Controller from '@ember/controller';
-import { set } from '@ember/object';
+import Controller from "@ember/controller";
+import { set } from "@ember/object";
 
 export default Controller.extend({
+  actions: {
+    async add(title) {
+      const bookTitle = await this.store.createRecord("book", { title });
+      bookTitle.save();
+      set(this, "title", "");
+    },
 
-    actions: {
-        add(title) {
-            let bookTitle = this.store.createRecord('book', {title});
-            bookTitle.save();
-            set(this, "title", "");
-        },
+    async delete(param) {
+      const book = await this.store.findRecord("book", param.id)
+      await book.destroyRecord();
+    },
 
-        delete(param) {
-            this.store.findRecord('book', param.id, {backgroundReload: false}).then(book => {
-                book.deleteRecord();
-                book.save();
-            });
-        }
-    }
+    async edit(item, edited) {
+      set(item, 'title', edited);
+      await item.save();
+    },
+  },
 });

@@ -9,12 +9,15 @@ module.exports = {
   ],
   extends: [
     'eslint:recommended',
-    'plugin:ember/recommended'
+    'plugin:ember/recommended',
+    'airbnb-base'
   ],
   env: {
     browser: true
   },
   rules: {
+    'import/no-extraneous-dependencies': 0,
+    'indent': [2]
   },
   overrides: [
     // node files

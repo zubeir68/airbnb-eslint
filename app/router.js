@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import EmberRouter from '@ember/routing/router';
 import config from './config/environment';
 
@@ -6,7 +7,7 @@ const Router = EmberRouter.extend({
   rootURL: config.rootURL
 });
 
-Router.map(function() {
+Router.map(function () {
   this.route('books');
 });
 

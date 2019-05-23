@@ -18,7 +18,7 @@
             </div>
             <div class="content">
               <div class="ui input">
-                {{input value=edited placeholder="Change Text..." }}
+                {{input value=edited placeholder="Change Text..." enter=(action "edit" item edited)}}
               </div> <button class="ui primary button">
                 <i class="ui write icon"></i>Ändern
               </button> <br> <br>
