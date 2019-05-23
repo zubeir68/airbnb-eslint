@@ -9,12 +9,14 @@
       </div>
       <div class="ui hidden divider"></div>
         {{#each model as |item|}}
-          {{#ui-accordion style="fluid"}}
-            <div class="visible">
-              
+          {{#ui-accordion class="styled"}}
+            <div class="title">
+              {{item.title}}
             </div>
-            <div class="hidden">
-
+            <div class="content">
+              <button class="ui red button" {{action "delete" item}}>
+                <i class="ui trash icon"></i>Löschen
+              </button>
             </div>
           {{/ui-accordion}}
         {{/each}}
