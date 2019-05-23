@@ -3,15 +3,14 @@
 ![enter image description here](https://res.cloudinary.com/practicaldev/image/fetch/s--AMz6SUme--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/jv8mmasb5mf0ilw5q1lz.png)
 ![enter image description here](https://cdn-images-1.medium.com/max/1600/1*EJf1MIFRPIOUd_Rns8Yqiw.png)
 
-## Was sind ESLint-Styleguides ?
+## Was ist ESLint ?
 
-***"People often ask me: 'is Octane a version of Ember? Is Octane Ember 4.0?'  
-Neither.  
-Octane is an announcement that number of anticipated features are ready for apps to use, because the guides, tooling, and most importantly the wider ecosystem is ready."***   -Yehuda Katz (co-founder of Ember.js)
+***"
+ESLint ist ein Open-Source-Dienstprogramm zum 'flusen' von JavaScript, das ursprünglich im Juni 2013 von Nicholas C. Zakas entwickelt wurde. Das Linten von Code ist eine statische Analyse, mit der häufig problematische Muster oder Codes ermittelt werden, die bestimmten Stilrichtlinien nicht entsprechen. Es gibt Code-Linters für die meisten Programmiersprachen, und Compiler integrieren manchmal Linting in den Kompilierungsprozess.."***   - eslint.org
 
-**Ziel: Produktivität und Perfomance**
+**Ziel: Produktivität und Lesbarkeit**
 
-## Features
+## Was sind ESLint Styleguides?
 
 ### 1.  jQuery nicht mehr standardmäßig
 
