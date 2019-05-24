@@ -27,5 +27,7 @@ export default function() {
   this.get('/books');
   this.post('/books');
   this.del('/books/:id');
-  this.put('book/:id');
+  this.put('/books/:id');
+  this.patch('/books/:id');
+  this.get('/books/:id');
 }
